@@ -1,0 +1,615 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#07121f;
+color:#fff;
+}
+
+a{
+text-decoration:none;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#0d1b2a;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:#3b82f6;
+font-size:24px;
+font-weight:bold;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+color:#fff;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#3b82f6;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 60px;
+}
+
+.hero-text{
+width:50%;
+}
+
+.hero-text h1{
+font-size:58px;
+line-height:70px;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:30px;
+color:#cbd5e1;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#2563eb;
+color:white;
+padding:14px 28px;
+border-radius:10px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
+}
+
+.hero-image{
+width:42%;
+}
+
+.hero-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(37,99,235,.35);
+}
+/* ==========================
+   CATEGORY SECTION
+========================== */
+
+.categories{
+padding:70px 60px;
+}
+
+.categories h2{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.category-box{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.category{
+background:#0f1b2e;
+padding:35px 20px;
+border-radius:18px;
+text-align:center;
+transition:.3s;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.category:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+.category i{
+font-size:45px;
+color:#3b82f6;
+margin-bottom:18px;
+}
+
+.category h3{
+font-size:20px;
+}
+
+/* ==========================
+   PRODUCTS
+========================== */
+
+.featured{
+padding:70px 60px;
+}
+
+.featured h2{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.card{
+background:#0f1b2e;
+border-radius:18px;
+overflow:hidden;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.card h3{
+padding:18px 20px 8px;
+font-size:22px;
+}
+
+.card p{
+padding:0 20px;
+font-size:22px;
+font-weight:bold;
+color:#3b82f6;
+}
+
+.card button{
+margin:20px;
+width:calc(100% - 40px);
+padding:14px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+.card button:hover{
+background:#1d4ed8;
+}
+
+/* ==========================
+   OFFER
+========================== */
+
+.offer{
+margin:70px 60px;
+background:linear-gradient(135deg,#2563eb,#1e3a8a);
+padding:70px;
+text-align:center;
+border-radius:20px;
+}
+
+.offer h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.offer p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+background:#0d1b2a;
+padding:35px;
+text-align:center;
+margin-top:60px;
+color:#cbd5e1;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:20px;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:40px 20px;
+}
+
+.hero-text,
+.hero-image{
+width:100%;
+}
+
+.hero-image{
+margin-top:40px;
+}
+
+.hero-text h1{
+font-size:40px;
+line-height:50px;
+}
+
+.category-box{
+grid-template-columns:repeat(2,1fr);
+}
+
+.products{
+grid-template-columns:1fr;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+}
+/* ===== PREMIUM PRODUCT CARDS ===== */
+
+.card{
+position:relative;
+background:#101b2d;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card h3{
+font-size:22px;
+margin:15px 20px 8px;
+}
+
+.card p{
+margin:0 20px;
+font-size:24px;
+font-weight:bold;
+color:#3b82f6;
+}
+
+.card button{
+width:calc(100% - 40px);
+margin:20px;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.card button:hover{
+background:#1d4ed8;
+}
+
+.badge{
+position:absolute;
+top:15px;
+left:15px;
+background:#ef4444;
+color:white;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+}
+
+.heart{
+position:absolute;
+top:15px;
+right:15px;
+background:white;
+width:38px;
+height:38px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#ef4444;
+font-size:18px;
+}
+.product-page{
+display:flex;
+gap:30px;
+padding:30px 60px;
+}
+
+.sidebar{
+width:220px;
+background:#101b2d;
+padding:20px;
+border-radius:15px;
+}
+
+.sidebar h3{
+margin-bottom:15px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:10px 0;
+cursor:pointer;
+color:#ddd;
+}
+
+.sidebar li:hover{
+color:#3b82f6;
+}
+
+.sidebar input{
+width:100%;
+margin:20px 0;
+}
+
+.filter-btn{
+width:100%;
+padding:12px;
+background:#2563eb;
+border:none;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.products{
+flex:1;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+.rating{
+margin:10px 20px;
+font-size:15px;
+color:#facc15;
+font-weight:600;
+}
+
+.rating span{
+color:#cbd5e1;
+font-size:13px;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="shop-header">
+
+    <div class="logo">
+        🛍️ <span>ShopEase</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+</header>
+
+
+<main class="cart-page">
+
+    <div class="cart-title">
+        <h1>Your Cart <span id="cart-count">(0)</span></h1>
+    </div>
+
+
+    <div class="cart-layout">
+
+        <!-- CART ITEMS -->
+
+        <section class="cart-items">
+
+            <div id="cart-container">
+                <!-- Products will come from cart.js -->
+            </div>
+
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <aside class="order-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">₹0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span id="shipping">₹0</span>
+            </div>
+
+            <div class="summary-row discount">
+                <span>Discount</span>
+                <span id="discount">-₹0</span>
+            </div>
+
+            <div class="summary-line"></div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <span id="total">₹0</span>
+            </div>
+
+            <a href="checkout.html" class="checkout-btn">
+                Proceed to Checkout
+            </a>
+
+            <a href="products.html" class="continue-shopping">
+                Continue Shopping
+            </a>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<script src="cart.js"></script>
+
+</body>
+</html>
+/* PRODUCT IMAGE + WISHLIST */
+
+.product-image-box{
+    position:relative;
+}
+
+.product-image-box img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+
+.heart{
+    position:absolute;
+    top:12px;
+    right:12px;
+
+    width:35px;
+    height:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#020617;
+    border-radius:50%;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.heart:hover{
+    color:#ef4444;
+}
+
+
+.rating{
+    margin-top:12px;
+    color:#facc15;
+    font-size:14px;
+}
+.cart-container,
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-summary {
+    width: 100%;
+    margin-top: 20px;
+}
+/* CART + CHECKOUT: Order Summary below */
+.cart-container,
+.checkout-container {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.order-summary {
+    width: 100% !important;
+    max-width: none !important;
+    margin-top: 25px !important;
+    position: static !important;
+}
+/* CHECKOUT - Order Summary neeche */
+.checkout-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+}
+
+.checkout-form {
+    width: 100% !important;
+}
+
+.checkout-layout .summary,
+.checkout-layout .order-summary {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    position: static !important;
+    order: 2 !important;
+}

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #020b1c;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            height: 72px;
+            background: #07152d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 42px;
+            border-bottom: 1px solid #142b4d;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: #1677ff;
+            font-size: 24px;
+        }
+
+        .logo h2 {
+            margin: 0;
+            font-size: 21px;
+        }
+
+        .logo h2 span {
+            color: #1683ff;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #1683ff;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .header-icon {
+            color: white;
+            font-size: 18px;
+        }
+
+        .login-btn {
+            background: #176cff;
+            padding: 10px 17px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero-home {
+            min-height: 390px;
+            display: grid;
+            grid-template-columns: 1fr 0.85fr;
+            align-items: center;
+            padding: 45px 55px;
+            background:
+                radial-gradient(circle at 70% 45%, #082d72 0%, #03142e 28%, #020b1c 65%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .collection {
+            display: inline-block;
+            background: #071f49;
+            border: 1px solid #0e3c80;
+            color: #6da8ff;
+            padding: 9px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        .hero-content h1 {
+            font-size: 46px;
+            line-height: 1.12;
+            margin: 0 0 15px;
+        }
+
+        .hero-content h1 span {
+            color: #176cff;
+        }
+
+        .hero-content p {
+            color: #c4cede;
+            line-height: 1.7;
+            max-width: 530px;
+            font-size: 14px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .shop-btn {
+            background: #176cff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .explore-btn {
+            border: 1px solid #176cff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .explore-btn:hover {
+            background: #176cff;
+        }
+
+        .hero-product {
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-product::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: #062b68;
+            filter: blur(35px);
+            opacity: .8;
+        }
+
+        .hero-product img {
+            position: relative;
+            width: 390px;
+            height: 330px;
+            object-fit: contain;
+            border-radius: 20px;
+            filter: drop-shadow(0 20px 35px rgba(0,0,0,.6));
+        }
+
+        /* ================= CATEGORY ================= */
+
+        .home-section {
+            padding: 28px 42px;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 18px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .section-heading p {
+            margin: 5px 0 0;
+            color: #7e94b5;
+            font-size: 12px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .category-card {
+            background: #0a1830;
+            border: 1px solid #142b4d;
+            border-radius: 12px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: .2s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-3px);
+            border-color: #176cff;
+        }
+
+        .category-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #176cff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .category-card h3 {
+            margin: 0 0 5px;
+            font-size: 14px;
+        }
+
+        .category-card p {
+            margin: 0;
+            color: #758ba9;
+            font-size: 11px;
+        }
+
+        /* ================= FEATURED ================= */
+
+        .featured-home {
+            padding: 28px 42px;
+        }
+
+        .view-all {
+            color: white;
+            text-decoration: none;
+            background: #0d2446;
+            padding: 9px 15px;
+            border-radius: 18px;
+            font-size: 12px;
+        }
+
+        .home-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .home-card {
+            background: #07152d;
+            border: 1px solid #203b61;
+            border-radius: 12px;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-card:hover {
+            border-color: #176cff;
+            transform: translateY(-3px);
+        }
+
+        .discount-tag {
+            position: absolute;
+            top: 17px;
+            left: 17px;
+            background: #ff4545;
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 9px;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .wish-btn {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            background: #07152d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .wish-btn i {
+            color: white;
+            font-size: 13px;
+        }
+
+        .home-card img {
+            width: 100%;
+            height: 155px;
+            object-fit: cover;
+            border-radius: 7px;
+            background: #101f37;
+        }
+
+        .category-name {
+            color: #6799e8;
+            font-size: 10px;
+            margin-top: 10px;
+        }
+
+        .home-card h3 {
+            margin: 5px 0;
+            font-size: 13px;
+        }
+
+        .rating {
+            font-size: 11px;
+            color: #ffc400;
+            margin: 5px 0;
+        }
+
+        .rating span {
+            color: #8092aa;
+        }
+
+        .price {
+            font-size: 13px;
+            font-weight: bold;
+            margin: 7px 0;
+        }
+
+        .old-price {
+            color: #687991;
+            text-decoration: line-through;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        .add-btn {
+            width: 100%;
+            border: none;
+            background: #176cff;
+            color: white;
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+        .add-btn:hover {
+            background: #075be5;
+        }
+
+        /* ================= SALE ================= */
+
+        .sale-banner {
+            margin: 20px 42px 35px;
+            min-height: 145px;
+            border-radius: 13px;
+            padding: 25px;
+            background:
+                linear-gradient(90deg, #104ce0, #0b2b85);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sale-banner h2 {
+            margin: 5px 0;
+            font-size: 27px;
+        }
+
+        .sale-banner p {
+            margin: 8px 0 15px;
+            font-size: 12px;
+            color: #d3ddf5;
+        }
+
+        .sale-btn {
+            display: inline-block;
+            background: white;
+            color: #075be5;
+            padding: 9px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #07152d;
+            text-align: center;
+            padding: 25px;
+            color: #8393aa;
+            font-size: 12px;
+        }
+
+        footer h3 {
+            color: white;
+            margin: 0 0 8px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 900px) {
+
+            header {
+                padding: 0 20px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            .hero-home {
+                grid-template-columns: 1fr;
+                padding: 35px 25px;
+            }
+
+            .hero-product {
+                height: 250px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .category-grid,
+            .home-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            header {
+                height: auto;
+                padding: 15px;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .header-right {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 31px;
+            }
+
+            .home-section,
+            .featured-home {
+                padding: 25px 18px;
+            }
+
+            .category-grid,
+            .home-products {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .category-card {
+                padding: 12px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .home-card img {
+                height: 120px;
+            }
+
+            .sale-banner {
+                margin: 15px 18px 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h2>Shop<span>Ease</span></h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="cart.html">Orders</a>
+    </nav>
+
+    <div class="header-right">
+
+        <a href="cart.html" class="header-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+        <a href="login.html" class="login-btn">
+            <i class="fa-solid fa-user"></i>
+            Login
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-home">
+
+    <div class="hero-content">
+
+        <div class="collection">
+            ✨ New Collection 2026
+        </div>
+
+        <h1>
+            Discover Your
+            <span>Perfect Shopping</span>
+            Experience
+        </h1>
+
+        <p>
+            ShopEase brings you the latest fashion, electronics,
+            accessories, and lifestyle products with amazing
+            discounts and secure shopping.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="product.html" class="shop-btn">
+                Shop Now
+            </a>
+
+            <a href="product.html" class="explore-btn">
+                Explore Products
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-product">
+
+        <img
+            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=700"
+            alt="Shopping Product">
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORY ================= -->
+
+<section class="home-section">
+
+    <div class="section-heading">
+
+        <div>
+            <h2>Shop By Category</h2>
+            <p>Browse our top product categories</p>
+        </div>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <div class="category-card">
+
+            <div class="category-icon">
+                <i class="fa-solid fa-laptop"></i>
+            </div>
+
+            <div>
+                <h3>Electronics</h3>
+                <p>Latest gadgets</p>
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+
+            <div>
+                <h3>Mobile</h3>
+                <p>Smartphones</p>
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">
+                <i class="fa-solid fa-shirt"></i>
+            </div>
+
+            <div>
+                <h3>Fashion</h3>
+                <p>Trending styles</p>
+            </div>
+
+        </div>
+
+
+        <div class="category-card">
+
+            <div class="category-icon">
+                <i class="fa-solid fa-couch"></i>
+            </div>
+
+            <div>
+                <h3>Furniture</h3>
+                <p>Modern decor</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURED PRODUCTS ================= -->
+
+<section class="featured-home">
+
+    <div class="section-heading">
+
+        <div>
+            <h2>Featured Products</h2>
+            <p>Discover our best selling products</p>
+        </div>
+
+        <a href="product.html" class="view-all">
+            View All
+        </a>
+
+    </div>
+
+
+    <div id="featured-products" class="home-products"></div>
+
+</section>
+
+
+<!-- ================= SALE ================= -->
+
+<section class="sale-banner">
+
+    <div>
+        🔥 MEGA SALE
+
+        <h2>Up To 70% OFF</h2>
+
+        <p>
+            Discover the latest fashion, electronics and
+            accessories at unbeatable prices.
+        </p>
+
+        <a href="product.html" class="sale-btn">
+            Shop Now
+        </a>
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        🛍️ ShopEase
+    </h3>
+
+    <p>
+        © 2026 ShopEase. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+<script>
+
+fetch("http://localhost:5000/api/products")
+
+.then(res => res.json())
+
+.then(products => {
+
+    const list = document.getElementById("featured-products");
+
+    if (!list) return;
+
+    list.innerHTML = "";
+
+    /* Only first 4 products */
+
+    products.slice(0, 4).forEach(product => {
+
+        const rating = product.rating || 4.5;
+
+        list.innerHTML += `
+
+        <div class="home-card">
+
+            <div class="discount-tag">
+                30% OFF
+            </div>
+
+            <div
+                class="wish-btn"
+                onclick="addToWishlist('${product.name}')"
+            >
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <img
+                src="${product.image}"
+                alt="${product.name}"
+                onerror="this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600'"
+            >
+
+            <div class="category-name">
+                ${product.category || "Product"}
+            </div>
+
+            <h3>
+                ${product.name}
+            </h3>
+
+            <div class="rating">
+                ⭐ ${rating}
+                <span>(120)</span>
+            </div>
+
+            <div class="price">
+                ₹${Number(product.price).toLocaleString("en-IN")}
+
+                <span class="old-price">
+                    ₹${Math.round(product.price * 1.25).toLocaleString("en-IN")}
+                </span>
+            </div>
+
+            <button
+                class="add-btn"
+                onclick="addToCart('${product.name}', ${product.price}, '${product.image}')"
+            >
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+})
+
+.catch(error => {
+
+    console.log("Products loading error:", error);
+
+});
+
+</script>
+
+</body>
+</html>
